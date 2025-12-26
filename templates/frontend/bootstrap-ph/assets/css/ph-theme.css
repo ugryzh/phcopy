@@ -1,0 +1,302 @@
+/* ===========================
+   THEME VARIABLES
+=========================== */
+
+:root {
+  --bg: #0e0e0e;
+  --bg-soft: #161616;
+  --bg-card: #1c1c1c;
+  --text: #e6e6e6;
+  --text-soft: #aaa;
+  --accent: #3da6ff;
+  --border: #2a2a2a;
+}
+
+[data-theme="light"] {
+  --bg: #f4f6f8;
+  --bg-soft: #ffffff;
+  --bg-card: #ffffff;
+  --text: #111;
+  --text-soft: #666;
+  --border: #ddd;
+}
+
+/* ===========================
+   GLOBAL
+=========================== */
+
+html, body {
+  background: var(--bg);
+  color: var(--text);
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+.ph-main {
+  padding: 1rem 0.75rem 2rem;
+}
+
+/* ===========================
+   HEADINGS
+=========================== */
+
+.ph-h1 {
+  font-size: 1.2rem;
+  margin-bottom: 0.75rem;
+}
+
+.ph-h2 {
+  font-size: 1.1rem;
+  margin: 1rem 0 0.75rem;
+}
+
+.ph-h3 {
+  font-size: 1rem;
+  margin-bottom: 0.5rem;
+}
+
+/* ===========================
+   VIDEO GRID
+=========================== */
+
+.video-thumb {
+  font-size: 0.85rem;
+}
+
+.video-thumb .thumb {
+  position: relative;
+  background: #000;
+  aspect-ratio: 16 / 9;
+  overflow: hidden;
+}
+
+.video-thumb img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Hover */
+.video-thumb .thumb:hover img {
+  transform: scale(1.05);
+}
+
+.video-thumb img {
+  transition: transform 0.2s linear;
+}
+
+/* Duration */
+.video-thumb .duration {
+  position: absolute;
+  bottom: 4px;
+  right: 4px;
+  background: rgba(0,0,0,.8);
+  padding: 1px 5px;
+  font-size: 0.7rem;
+  border-radius: 2px;
+}
+
+/* Badge */
+.video-thumb .badge {
+  position: absolute;
+  top: 4px;
+  left: 4px;
+  background: var(--accent);
+  color: #000;
+  font-size: 0.7rem;
+  padding: 1px 4px;
+  border-radius: 2px;
+}
+
+/* Title */
+.video-thumb .title {
+  margin: 0.4rem 0 0.2rem;
+  font-size: 0.8rem;
+  line-height: 1.2;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+/* Meta */
+.video-thumb .meta {
+  font-size: 0.7rem;
+  color: var(--text-soft);
+  display: flex;
+  justify-content: space-between;
+}
+
+/* Small version (related) */
+.video-thumb.small {
+  margin-bottom: 0.5rem;
+}
+
+.video-thumb.small img {
+  height: auto;
+}
+
+/* ===========================
+   VIDEO PAGE
+=========================== */
+
+.ph-video-title {
+  font-size: 1.1rem;
+  margin-bottom: 0.3rem;
+}
+
+.video-meta {
+  font-size: 0.75rem;
+  color: var(--text-soft);
+}
+
+/* ===========================
+   USER PROFILE
+=========================== */
+
+.user-profile {
+  background: var(--bg-soft);
+  padding: 1rem;
+  margin-bottom: 1rem;
+}
+
+.user-profile h1 {
+  font-size: 1.2rem;
+}
+
+.user-profile p {
+  font-size: 0.85rem;
+  color: var(--text-soft);
+}
+
+/* ===========================
+   PAGINATION
+=========================== */
+
+.pagination {
+  margin-top: 1.5rem;
+  gap: 0.3rem;
+}
+
+.page-link {
+  background: var(--bg-card);
+  color: var(--text);
+  border: 1px solid var(--border);
+  font-size: 0.8rem;
+  padding: 0.3rem 0.55rem;
+}
+
+.page-link:hover {
+  background: var(--bg-soft);
+  color: var(--text);
+}
+
+.page-item.active .page-link {
+  background: var(--accent);
+  border-color: var(--accent);
+  color: #000;
+}
+
+/* ===========================
+   FOOTER
+=========================== */
+
+.ph-footer {
+  background: #000;
+  padding: 0.75rem;
+  font-size: 0.75rem;
+  color: #aaa;
+}
+
+.ph-footer a {
+  color: #aaa;
+  margin-left: 1rem;
+}
+
+.ph-footer a:hover {
+  color: #fff;
+}
+
+/* ===========================
+   OFFCANVAS
+=========================== */
+
+.ph-offcanvas {
+  background: #000;
+  color: #fff;
+}
+
+.ph-mobile-menu {
+  list-style: none;
+  padding: 0;
+}
+
+.ph-mobile-menu li {
+  margin-bottom: 1rem;
+}
+
+.ph-mobile-menu a,
+.ph-mobile-menu button {
+  font-size: 1rem;
+  background: none;
+  border: none;
+  color: #fff;
+}
+
+/* ===========================
+   SEARCH
+=========================== */
+
+.ph-search input {
+  background: #222;
+  border: none;
+  color: #fff;
+  font-size: 0.85rem;
+}
+
+[data-theme="light"] .ph-search input {
+  background: #eee;
+  color: #000;
+}
+
+.ph-search input:focus {
+  box-shadow: none;
+}
+
+/* ===========================
+   NAVBAR (SAFE OVERRIDES)
+=========================== */
+
+.ph-navbar {
+  background: #000;
+  padding: 0.4rem 0.75rem;
+}
+
+.ph-logo {
+  font-weight: bold;
+  font-size: 1.3rem;
+}
+
+.ph-theme-toggle {
+  background: none;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+}
+
+/* ===========================
+   PERFORMANCE
+=========================== */
+
+* {
+  box-sizing: border-box;
+}
+
